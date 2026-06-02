@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para mi amor</title>
+<style>
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #ffe3ec, #ffd6e8);
+  text-align: center;
+  padding: 50px;
+  color: #5a2a3c;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+button {
+  background: #ff8fb1;
+  border: none;
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff6f98;
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 25px;
+  width: 80%;
+  max-width: 450px;
+  border-radius: 15px;
+  animation: fadeIn 0.4s ease;
+  color: #4a1f2c;
+}
+
+.close {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<h1>Cartas para mi amor 💌</h1>
+
+<button onclick="openModal('c1')">Carta 1</button>
+<button onclick="openModal('c2')">Carta 2</button>
+<button onclick="openModal('c3')">Carta 3</button>
+
+<div id="c1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('c1')">&times;</span>
+    <h2>Carta 1</h2>
+    <p>Aquí va tu primera carta, escrita con cariño...</p>
+  </div>
+</div>
+
+<div id="c2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('c2')">&times;</span>
+    <h2>Carta 2</h2>
+    <p>Aquí va tu segunda carta...</p>
+  </div>
+</div>
+
+<div id="c3" class="modal">
+  <div class="modal-content">
