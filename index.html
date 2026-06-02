@@ -12,7 +12,14 @@ body {
   padding: 50px;
   color: #5a2a3c;
 }
-
+.subtitulo {
+  font-size: 22px;
+  margin-top: -10px;
+  margin-bottom: 40px;
+  color: #7a3b52;
+  font-style: italic;
+  opacity: 0.9;
+}
 h1 {
   font-size: 40px;
   margin-bottom: 30px;
@@ -22,16 +29,18 @@ h1 {
 .envelope {
   width: 180px;
   height: 120px;
-  background: #ff8fb1;
+  background: #ffb3c6;
   margin: 20px auto;
-  border-radius: 10px;
+  border-radius: 12px;
   position: relative;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .envelope:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
 .envelope:before {
@@ -41,7 +50,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 60%;
-  background: #ff6f98;
+  background: #ff8fb1;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transition: transform 0.4s ease;
   transform-origin: top;
@@ -74,13 +83,14 @@ h1 {
 /* EFECTO PAPEL */
 .paper {
   background: #fffdf5;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 30px;
+  border-radius: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
   font-family: 'Georgia', serif;
-  line-height: 1.6;
+  line-height: 1.7;
   background-image: url(''https://www.transparenttextures.com/patterns/old-wall.png');
   background-size: cover;
+  border: 1px solid #e8d9c3;
 }
 
 .close {
@@ -99,6 +109,7 @@ h1 {
 <body>
 
 <h1>Porque te amo a distancia💌</h1>
+<h2 class="subtitulo">Te dejo unas cartitas escritas con mucho amor</h2>
 
 <!-- SOBRES -->
 <div class="envelope" onclick="openModal(event, carta1')"></div>
@@ -112,7 +123,7 @@ h1 {
     <p>
       ¡Hola mi vida! bienvenida a una pequeña página que he creado para tí, y estaré poniendo distintas sorpresas a lo largo de este mes tan especial.
       Que sepas que a pesar de la distancia, muy recurrentemente vienes a mis pensamientos a invadirme.
-      Estaré actualizando esto de manera recurrente y sin que tu te enteres, ¿Cuando sucederá lo siguiente?
+      Es la primera vez que hago un sitio web😗, pero estaré actualizando esto de manera recurrente (y sin que tu te enteres), ¿Cuando sucederá lo siguiente?
       Te ama mucho,
       Sir Landa
     </p>
