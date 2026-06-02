@@ -56,4 +56,114 @@ h1 {
   display: none;
   position: fixed;
   top: 0; left: 0;
-  width: 100
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 25px;
+  width: 80%;
+  max-width: 450px;
+  border-radius: 15px;
+  animation: fadeIn 0.4s ease;
+  color: #4a1f2c;
+}
+
+/* EFECTO PAPEL */
+.paper {
+  background: #fffdf5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  background-image: url('https://i.imgur.com/8w7ZQpS.png');
+  background-size: cover;
+}
+
+.close {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Cartas para mi amor 💌</h1>
+
+<!-- SOBRES -->
+<div class="envelope" onclick="openModal(event, 'carta1')"></div>
+<div class="envelope" onclick="openModal(event, 'carta2')"></div>
+<div class="envelope" onclick="openModal(event, 'carta3')"></div>
+
+<!-- CARTA 1 -->
+<div id="carta1" class="modal">
+  <div class="modal-content paper">
+    <span class="close" onclick="closeModal('carta1')">&times;</span>
+    <h2>Carta 1</h2>
+    <p>
+      Aquí va el texto de tu primera carta.  
+      Puedes escribir todo lo que sientes, con calma, como si fuera papel de verdad.
+    </p>
+  </div>
+</div>
+
+<!-- CARTA 2 -->
+<div id="carta2" class="modal">
+  <div class="modal-content paper">
+    <span class="close" onclick="closeModal('carta2')">&times;</span>
+    <h2>Carta 2</h2>
+    <p>
+      Aquí va la segunda carta.  
+      Puedes contarle un recuerdo, un sueño juntos, algo que solo ustedes dos entiendan.
+    </p>
+  </div>
+</div>
+
+<!-- CARTA 3 -->
+<div id="carta3" class="modal">
+  <div class="modal-content paper">
+    <span class="close" onclick="closeModal('carta3')">&times;</span>
+    <h2>Carta 3</h2>
+    <p>
+      Aquí va la tercera carta.  
+      Tal vez algo sobre el futuro, promesas, o simplemente un “gracias por existir”.
+    </p>
+  </div>
+</div>
+
+<script>
+const openSound = new Audio("https://cdn.pixabay.com/download/audio/2022/03/15/audio_7e0a3d75f0.mp3?filename=paper-open-1.mp3");
+const closeSound = new Audio("https://cdn.pixabay.com/download/audio/2022/03/15/audio_4e0a3d75f0.mp3?filename=paper-close-1.mp3");
+
+function openModal(event, id) {
+  const envelope = event.currentTarget;
+  envelope.classList.add("open");
+  openSound.currentTime = 0;
+  openSound.play();
+  setTimeout(() => {
+    document.getElementById(id).style.display = 'block';
+  }, 400);
+}
+
+function closeModal(id) {
+  closeSound.currentTime = 0;
+  closeSound.play();
+  document.getElementById(id).style.display = 'none';
+
+  const envelopes = document.querySelectorAll(".envelope");
+  envelopes.forEach(env => env.classList.remove("open"));
+}
+</script>
+
+</body>
+</html>
