@@ -1,61 +1,6 @@
 # carlandalanda.github.io
 Un sitio para alguien especial
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Cartas para Ti 💖</title>
-<style>
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-    text-align: center;
-    padding: 30px;
-    color: #fff;
-  }
-  h1 {
-    margin-bottom: 20px;
-  }
-  .carta {
-    width: 250px;
-    height: 150px;
-    margin: 20px auto;
-    background: #fff;
-    color: #333;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1em;
-    cursor: pointer;
-    transform: scale(0.9);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  .carta:hover {
-    transform: scale(1);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-  }
-  .bloqueada {
-    background: rgba(255,255,255,0.7);
-    color: #555;
-    cursor: default;
-  }
-  .contador {
-    font-size: 0.9em;
-    color: #ff4f81;
-    position: absolute;
-    bottom: 10px;
-  }
-  .mensaje {
-    display: none;
-    padding: 15px;
-  }
-</style>
-</head>
-<body>
+
 
 <h1>💌 Cartas Especiales para Ti 💌</h1>
 
