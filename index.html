@@ -103,9 +103,8 @@ h1 {
 <!-- SOBRES -->
 <div class="envelope" onclick="openModal(event, 'Feliz mes de cumpleaños!')"></div>
 <div class="envelope" onclick="openModal(event, 'carta2')"></div>
-<div class="envelope" onclick="openModal(event, 'carta3')"></div>
 
-<!-- CARTA 1 -->
+<!-- ¡El mes más feliz del año! -->
 <div id="Feliz mes de cumpleaños!" class="modal">
   <div class="modal-content paper">
     <span class="close" onclick="closeModal('Feliz mes de cumpleaños!')">&times;</span>
@@ -113,6 +112,7 @@ h1 {
     <p>
       ¡Hola mi vida! bienvenida a una pequeña página que he creado para tí, y estaré poniendo distintas sorpresas a lo largo de este mes tan especial.
       Que sepas que a pesar de la distancia, muy recurrentemente vienes a mis pensamientos a invadirme.
+      Estaré actualizando esto de manera recurrente y sin que tu te enteres, ¿Cuando sucederá lo siguiente?
       Te ama mucho,
       Sir Landa
     </p>
@@ -131,21 +131,9 @@ h1 {
   </div>
 </div>
 
-<!-- CARTA 3 -->
-<div id="carta3" class="modal">
-  <div class="modal-content paper">
-    <span class="close" onclick="closeModal('carta3')">&times;</span>
-    <h2>Carta 3</h2>
-    <p>
-      Aquí va la tercera carta.  
-      Tal vez algo sobre el futuro, promesas, o simplemente un “gracias por existir”.
-    </p>
-  </div>
-</div>
-
 <script>
-const openSound = new Audio("carlandalanda.github.io/mixkit-page-turn-single-1104.wav");
-const closeSound = new Audio("carlandalanda.github.io/mixkit-paper-slide-1530.wav");
+const openSound = new Audio("https://github.com/carlandalanda/carlandalanda.github.io/raw/refs/heads/main/mixkit-page-turn-single-1104.wav");
+const closeSound = new Audio("https://github.com/carlandalanda/carlandalanda.github.io/raw/refs/heads/main/mixkit-paper-slide-1530.wav");
 
 function openModal(event, id) {
   const envelope = event.currentTarget;
