@@ -79,7 +79,7 @@ h1 {
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
   font-family: 'Georgia', serif;
   line-height: 1.6;
-  background-image: url('https://i.imgur.com/8w7ZQpS.png');
+  background-image: url(''https://www.transparenttextures.com/patterns/old-wall.png');
   background-size: cover;
 }
 
@@ -147,9 +147,15 @@ const closeSound = new Audio("https://cdn.pixabay.com/download/audio/2022/03/15/
 
 function openModal(event, id) {
   const envelope = event.currentTarget;
-  envelope.classList.add("open");
+
+  // reproducir sonido inmediatamente (esto sí está permitido)
   openSound.currentTime = 0;
   openSound.play();
+
+  // animación del sobre
+  envelope.classList.add("open");
+
+  // abrir carta después de la animación
   setTimeout(() => {
     document.getElementById(id).style.display = 'block';
   }, 400);
@@ -158,8 +164,10 @@ function openModal(event, id) {
 function closeModal(id) {
   closeSound.currentTime = 0;
   closeSound.play();
+
   document.getElementById(id).style.display = 'none';
 
+  // cerrar sobres
   const envelopes = document.querySelectorAll(".envelope");
   envelopes.forEach(env => env.classList.remove("open"));
 }
