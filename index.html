@@ -138,7 +138,7 @@ h1 {
 
 /* MODALES */
 .modal {
-display: flex;
+display: none;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -253,7 +253,10 @@ function checkPassword() {
   if (input === correctPassword) {
     document.getElementById("password-screen").style.display = "none";
     document.getElementById("welcome-message").style.display = "flex";
-
+// Cerrar todos los sobres al entrar
+document.querySelectorAll('.envelope').forEach(env => {
+  env.classList.remove('open');
+});
     setTimeout(() => {
       document.getElementById("welcome-message").style.display = "none";
     }, 2000); // 3 segundos
