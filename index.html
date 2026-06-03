@@ -236,11 +236,17 @@ h1 {
 </div>
 <script>
 function checkPassword() {
-  const correctPassword = "soyfati"; // ← CAMBIA ESTO
+  const correctPassword = "teamo"; // ← cámbiala
   const input = document.getElementById("password-input").value;
 
   if (input === correctPassword) {
     document.getElementById("password-screen").style.display = "none";
+    document.getElementById("welcome-message").style.display = "flex";
+
+    setTimeout(() => {
+      document.getElementById("welcome-message").style.display = "none";
+    }, 2000); // 3 segundos
+
   } else {
     document.getElementById("error-message").style.display = "block";
   }
