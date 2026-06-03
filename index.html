@@ -248,13 +248,7 @@ display: none;
     </p>
   </div>
 </div>
-<script>
-  function fixMobileZoom() {
-  const meta = document.querySelector("meta[name=viewport]");
-  meta.setAttribute("content", "width=device-width, initial-scale=1, viewport-fit=cover");
-    </script>
-}
-<script>
+
 function checkPassword() {
   const correctPassword = "fati"; // ← cámbiala
   const input = document.getElementById("password-input").value;
@@ -272,9 +266,6 @@ document.querySelectorAll('.envelope').forEach(env => {
   } else {
     document.getElementById("error-message").style.display = "block";
   }
-  document.getElementById("password-screen").style.display = "none";
-fixMobileZoom();
-}
 
 }
 </script>
