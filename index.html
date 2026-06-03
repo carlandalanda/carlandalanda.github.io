@@ -265,6 +265,10 @@ document.querySelectorAll('.envelope').forEach(env => {
     document.getElementById("error-message").style.display = "block";
   }
 }
+function resetZoom() {
+  const meta = document.querySelector("meta[name=viewport]");
+  meta.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1");
+}
 </script>
 <script>
 const openSound = new Audio("https://github.com/carlandalanda/carlandalanda.github.io/raw/refs/heads/main/mixkit-page-turn-single-1104.wav");
