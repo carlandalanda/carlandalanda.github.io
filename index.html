@@ -215,7 +215,6 @@ display: none;
 
 <!-- SOBRES -->
 <div class="envelope" onclick="openModal(event, 'carta1')"></div>
-<div class="envelope" onclick="openModal(event, 'carta2')"></div>
 
 <!-- ¡36 añitos! -->
 <div id="carta1" class="modal">
@@ -235,6 +234,16 @@ display: none;
   </div>
 </div>
 
+  <div id="carta2" class="modal">
+  <div class="modal-content paper">
+    <span class="close" onclick="closeModal('carta2')">&times;</span>
+    <h2>Habrá nuevas noticias pronto!</h2>
+    <p>
+       🥰
+      
+    </p>
+  </div>
+</div>
 <script>
 function checkPassword() {
   const correctPassword = "fati"; // ← cámbiala
